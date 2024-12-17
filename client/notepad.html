@@ -263,7 +263,71 @@
             padding: 0.5rem;
             margin-left: auto;
             margin-right: auto;
-        }             
+        }
+
+        .download-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #5D3FD3; /* Primary color */
+  color: #FFFFFF;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.75rem 1.25rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.download-btn svg {
+  width: 18px;
+  height: 18px;
+  margin-right: 0.5rem;
+  stroke: #FFFFFF;
+  stroke-width: 2;
+}
+
+.download-btn:hover {
+  background-color: #4A7FBF; /* Secondary color */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .download-btn {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .download-btn svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 0.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .download-btn {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .download-btn svg {
+    width: 14px;
+    height: 14px;
+    margin-right: 0.3rem;
+  }
+
+  .fw-bold{
+    width: 14px;
+
+  }
+  #modeToggle{
+    display:none;
+  }
+}
+        
+        
     </style>
 </head>
 <body>
@@ -284,9 +348,18 @@
                     <i data-lucide="moon" class="text-secondary d-none" id="moonIcon"></i>
                 </div>
                 <!-- Download Note Button -->
-                <button class="btn btn-primary" id="saveNoteBtn">
+                <!-- <button class="btn btn-primary" id="saveNoteBtn">
                     <i data-lucide="download"></i> Download Note
-                </button>
+                </button> -->
+
+                <a href="#" class="download-btn" id="saveNoteBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                      <path d="M7 10l5 5 5-5" />
+                      <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    Download Note
+                  </a>
             </div>
         </div>
     </nav>
