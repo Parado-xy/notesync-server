@@ -7391,3 +7391,6 @@
 ::1, GET, /javascript/notepad-auto-read.js, [object Object] 
 ::1, GET, /javascript/lucide.js.map, [object Object] 
 ::1, GET, /assets/logo.svg, [object Object] 
+::1, GET, /api/fetchnotes?user_id=675f17ab3c8f0e868aff8c7d, [object Object] 
+::1, POST, /api/syncnotes, [object Object] 
+::1, POST, /api/syncnotes, [object Object] 
