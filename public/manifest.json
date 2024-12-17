@@ -1,0 +1,36 @@
+{
+    "name": "Note Sync",
+    "short_name": "NoteSync",
+    "description": "A voice-first note taking application.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#e9ecf3",
+    "theme_color": "#2575fc",
+    "orientation": "landscape",
+    "icons": [
+      {
+        "src": "logo.svg",
+        "type": "image/svg+xml",
+        "sizes": "any",
+        "purpose": "any"
+      }
+    ],
+    "categories": ["productivity", "utilities", "accessibility", "note taking", "pdf"],
+    "lang": "en-US",
+    "screenshots": [],
+
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "permissions": [
+      "microphone"
+    ],
+    "features": [
+      "Cross Platform",
+      "Text to Speech",
+      "Voice Selection",
+      "Note Taking",
+      "Voice First",
+      "Page Navigation",
+      "Offline Support"
+    ]
+  }
