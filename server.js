@@ -4,21 +4,23 @@ const express = require('express'),
       express_session = require('express-session'),
       mongoose = require('mongoose'),
       credentials = require('./credentials.json'),
-      more_credentials = require('./credentials2.json'),
-      passport = require('passport'),
-      GoogleStrategy = require('passport-google-oauth20'),
       body_parser = require('body-parser');
 
+
+// SET UP DOTENV
+require("dotenv").config();      
 // INSTANTIATE SERVER
 const server =  express(); 
 
 // CONNECT DATABASE
-mongoose.connect(credentials.mongodb_connection_string + 'notesync')
-.then(() => {
-    console.log('Database Connected');
-}).catch((err) => {
-    console.error('Database connection error:', err);
-});
+mongoose
+  .connect(process.env.MONGODB_URI + "notesync")
+  .then(() => {
+    console.log("Database Connected");
+  })
+  .catch((err) => {
+    console.error("Database connection error:", err);
+  });
 
 const db = mongoose.connection;
 
@@ -34,7 +36,7 @@ server.use(require('./lib/logger'));
 
 server.use(express.static('public'));
 
-server.use(express_session({secret: credentials.session_secret,
+server.use(express_session({secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: true
 }));
