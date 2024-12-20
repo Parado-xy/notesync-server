@@ -1,8 +1,7 @@
-
-
 # NoteSync
 
-NoteSync is a voice-first note-taking application that allows users to create, edit, and manage notes with voice input capabilities. The application supports offline functionality, note synchronization, and PDF export.
+NoteSync is a voice-first note-taking application that allows users to create, edit, and manage notes with voice input capabilities. The application supports offline functionality (It's a PWA), note synchronization, and PDF export.
+The project is live at: https://notesync-fyvo.onrender.com/
 
 ## Features
 
@@ -62,7 +61,7 @@ server/
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/notesync.git
+    git clone https://github.com/parado-xy/notesync-server.git
     cd notesync
     ```
 
@@ -88,6 +87,9 @@ server/
 - **POST `/api/syncnotes`**: Sync notes with the server.
 - **GET `/api/fetchnotes`**: Fetch notes from the server.
 - **POST `/api/deletenote`**: Delete a note.
+- **GET `/signon`**: Serve the sign-on page.
+- **GET `/auth/google`**: Initiate Google authentication.
+- **GET `/auth/google/callback`**: Handle Google authentication callback.
 
 ## Scripts
 
@@ -123,4 +125,3 @@ This project is licensed under the MIT License.
 
 For any inquiries, please contact the project maintainer at [jallaamaju@gmail.com].
 
-Similar code found with 1 license type
