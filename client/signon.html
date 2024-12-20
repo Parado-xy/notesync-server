@@ -229,36 +229,11 @@
         signupTab.addEventListener('click', () => toggleForm(true));
         signinTab.addEventListener('click', () => toggleForm(false));
 
-        // Form Submission Handler
-        authForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const isSignup = signupTab.classList.contains('active');
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-
-            // Simple validation
-            if (!email || !password) {
-                errorMessage.textContent = 'Please fill in all required fields';
-                return;
-            }
-
-            if (isSignup) {
-                const termsChecked = document.getElementById('termsCheck').checked;
-                if (!termsChecked) {
-                    errorMessage.textContent = 'Please agree to the terms of service';
-                    return;
-                }
-                // Signup logic would go here
-                console.log('Signup', email, password);
-            } else {
-                // Signin logic would go here
-                console.log('Signin', email, password);
-            }
-            errorMessage.textContent = ''; // Clear any previous errors
-        });
+        
 
         lucide.createIcons();
         
     </script>
+    <script src="/javascript/sign-in-on.js"></script>
 </body>
 </html>

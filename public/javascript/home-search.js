@@ -15,13 +15,6 @@ const HTMLElements = {
 
 
 
-// INITIALIZE THE SERVICE IN DEBUG MODE
-const service = new VoiceSearchService(RecognitionClass, true, null, {
-    debugMode: false,
-    lang: 'en-US'
-});
-
-
 // Updated usage in the main script
 document.addEventListener('DOMContentLoaded', () => {
     const micButton = document.getElementById('micButton');
